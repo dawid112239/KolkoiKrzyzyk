@@ -75,6 +75,7 @@ INT_PTR CALLBACK DialogProc(HWND hwndDig, UINT uMsg, WPARAM wParam, LPARAM lPara
     case BN_CLICKED:
       switch (LOWORD(wParam))
       {
+
       case IDC_BUTTON1:
       case IDC_BUTTON2:
       case IDC_BUTTON3:
@@ -183,6 +184,7 @@ INT_PTR CALLBACK DialogProc(HWND hwndDig, UINT uMsg, WPARAM wParam, LPARAM lPara
 
         }
         return TRUE;
+
       }
 
       return FALSE;
@@ -214,6 +216,7 @@ int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hPrevinstance, PSTR szCmdLIne,
   ShowWindow(hwndMainWindow, iCmdShow);
   MSG msg = {};
   CheckRadioButton(hwndMainWindow, IDC_RADIO1, IDC_RADIO2, IDC_RADIO1);
+
   while (GetMessage(&msg, NULL, 0, 0))
   {
     TranslateMessage(&msg);
